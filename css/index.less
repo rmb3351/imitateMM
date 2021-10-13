@@ -1,0 +1,236 @@
+body{
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+// 限制最大宽度时比例
+@media screen and (min-width:750px) {
+  html{
+    font-size: 37.5px!important;
+  }
+}
+a{
+  text-decoration: none;
+  color: #707070;
+}
+// header模块
+header{
+  width: 100%;
+  height: 2.133333rem;
+  border-bottom: 1px solid #eaeaea;
+  line-height: 2.133333rem;
+  text-align: center;
+  font-size: .88rem;
+  color: #1c1c1c;
+}
+// nav模块
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.2rem 0 1.6rem 0;
+  a{
+    flex: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 3.706667rem;
+      height: 3.706667rem;
+    }
+    // 写法1：在a的基础小添加结构伪类选择器意味着是a且满足是nav的前三个子元素
+    // &:nth-child(-n+3){
+    //   margin-bottom: 1.653333rem;
+    // }
+    span{
+      font-size: .666667rem;
+    }
+  }
+  // 写法2：单独写结构伪类选择器
+  a:nth-child(-n+3){
+    margin-bottom: 1.653333rem;
+  }
+}
+// go模块
+.go{
+  padding: 0 .266667rem 1.12rem .48rem;
+  img{
+    width: 100%;
+  }
+}
+// 就业指导模块
+.content_jyzd{
+  border-top: .266667rem solid rgb(240, 242, 241);
+  padding: 1.066667rem .64rem;
+  .content_hd{
+    display: flex;
+    // 两侧对齐
+    justify-content: space-between;
+    height: 1.013333rem;
+    margin-bottom: .906667rem;
+    h4{
+      margin: 0;
+      line-height: 1.013333rem;
+      font-size: .746667rem;
+      color: #333;
+      span{
+        display: inline-block;
+        // 下面的垂直居中效果不太好，微调一下位置
+        margin-top: -0.1rem;
+        height: 1.013333rem;
+        width: 1.013333rem;
+        vertical-align: middle;
+      }
+    }
+    a{
+      line-height: 1.013333rem;
+      font-size: .613333rem;
+      color: #999;
+    }
+  }
+  .content_swiper{
+    // 因为把下面轮播图的箭头拿出swiper-container了，所以这里要子绝父相
+    position: relative;
+    .swiper-container {
+      // width: 100%;
+      width: 14.4rem;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+	    transition: 300ms;
+	    transform: scale(0.8);
+      opacity: 0.4;
+      a{
+        width: 9.013333rem;
+        height: 10.026667rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      span{
+        width: 9.013333rem;
+        font-size: .666667rem;
+        margin-top: .64rem;
+      }
+    }
+	  .swiper-slide-active,.swiper-slide-duplicate-active{
+      transform: scale(1);
+      z-index: 1;
+      opacity: 1;
+	  }
+  }
+}
+// 充电学习模块
+.content_cdxx{
+  border-top: .266667rem solid rgb(240, 242, 241);
+  padding: 1.066667rem .64rem;
+  margin-bottom: 3.733333rem;
+  .content_hd{
+    display: flex;
+    // 两侧对齐
+    justify-content: space-between;
+    height: 1.013333rem;
+    margin-bottom: .906667rem;
+    h4{
+      margin: 0;
+      line-height: 1.013333rem;
+      font-size: .746667rem;
+      color: #333;
+      span{
+        display: inline-block;
+        // 下面的垂直居中效果不太好，微调一下位置
+        margin-top: -0.1rem;
+        height: 1.013333rem;
+        width: 1.013333rem;
+        vertical-align: middle;
+      }
+    }
+    a{
+      line-height: 1.013333rem;
+      font-size: .613333rem;
+      color: #999;
+    }
+  }
+  .content_swiper{
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      padding: .266667rem;
+    }
+
+    .swiper-slide {
+      width: 7.2rem;
+      height: 9.066667rem;
+      border-radius: .266667rem;
+      font-size: 18px;
+      background: #fff;
+      box-shadow: 0 0 .266667rem rgba(0,0,0,.1);
+      h5{
+        margin: .533333rem .266667rem;
+        font-size: .693333rem;
+        font-weight: normal;
+      }
+      p{
+        margin: 0 .266667rem;
+        font-size: .613333rem;
+        i{
+          font-style: normal;
+          color: rgb(196, 94, 63);
+        }
+      }
+    }
+  }
+}
+// 底部导航模块
+footer{
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+  height: 2.933333rem;
+  display: flex;
+  z-index: 10;
+  border-top: 2px solid #ccc;
+  background: #fff;
+  padding-top: .533333rem;
+  a{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 1.04rem;
+      height: 1.093333rem;
+    }
+    p{
+      margin-top: .266667rem;
+      font-size: .64rem;
+    }
+  }
+  a:nth-child(1){
+    p{
+      color: rgb(80, 202, 226);
+    }
+  }
+}

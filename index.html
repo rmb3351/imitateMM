@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!-- 导入swiper.com.cn的轮播图的样式 -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+  <!-- 顶部标题 -->
+  <header>模拟面面</header>
+  <!-- 导航部分 -->
+  <nav class="nav">
+    <a href="#">
+      <img src="icons/icon1.png" alt="">
+      <span>HR面试</span>
+    </a>
+    <a href="#">
+      <img src="icons/icon2.png" alt="">
+      <span>笔试</span>
+    </a>
+    <a href="#">
+      <img src="icons/icon3.png" alt="">
+      <span>技术面试</span>
+    </a>
+    <a href="#">
+      <img src="icons/icon4.png" alt="">
+      <span>模拟面试</span>
+    </a>
+    <a href="#">
+      <img src="icons/icon5.png" alt="">
+      <span>面试技巧</span>
+    </a>
+    <a href="#">
+      <img src="icons/icon6.png" alt="">
+      <span>薪资查询</span>
+    </a>
+  </nav>
+  <!-- go模块 -->
+  <section class="go">
+    <img src="images/go.png" alt="">
+  </section>
+  <!-- 就业指导模块 -->
+  <section class="content_jyzd">
+    <div class="content_hd">
+      <h4>
+        <span><img src="icons/i2.png" alt=""></span>
+        就业指导
+      </h4>
+      <a href="#">更多>></a>
+    </div>
+    <!-- swiper模块 -->
+    <div class="content_swiper">
+      <div class="swiper-container swiper_jyzd">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#"><img src="images/pic.png" alt=""></a>
+            <span>老师教你应对面试技巧</span>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/pic.png" alt=""></a>
+            <span>老师教你应对面试技巧2</span>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/pic.png" alt=""></a>
+            <span>老师教你应对面试技巧3</span>
+          </div>
+        </div>
+        <!-- 轮播图下面的小圆点 -->
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+      <!-- 左右箭头，拿出swiper-container是因为限制了swiper-container的宽度，不拿出来的话无法放到限制宽度的外面，会被切掉 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+  <!-- 充电学习模块 -->
+  <section class="content_cdxx">
+    <div class="content_hd">
+      <h4>
+        <span><img src="icons/i1.png" alt=""></span>
+        充电学习
+      </h4>
+      <a href="#">更多>></a>
+    </div>
+    <!-- swiper模块 -->
+    <div class="content_swiper">
+      <div class="swiper-container swiper_cdxx">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/pic1.png" alt="">
+            <h5>说地道英语，告别中式英语</h5>
+            <p><i>156</i>人学习</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/pic2.png" alt="">
+            <h5>思维攻略金字塔思维提升写作能力</h5>
+            <p><i>125</i>人学习</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/pic1.png" alt="">
+            <h5>说地道英语，告别中式英语</h5>
+            <p><i>156</i>人学习</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/pic2.png" alt="">
+            <h5>思维攻略金字塔思维提升写作能力</h5>
+            <p><i>125</i>人学习</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/pic1.png" alt="">
+            <h5>说地道英语，告别中式英语</h5>
+            <p><i>156</i>人学习</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/pic2.png" alt="">
+            <h5>思维攻略金字塔思维提升写作能力</h5>
+            <p><i>125</i>人学习</p>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </div>
+  </section>
+  <!-- 底部导航模块 -->
+  <footer>
+    <a href="#">
+      <img src="icons/home.png" alt="">
+      <p>首页</p>
+    </a>
+    <a href="#">
+      <img src="icons/ms.png" alt="">
+      <p>模拟测试</p>
+    </a>
+    <a href="#">
+      <img src="icons/net.png" alt="">
+      <p>技术面试</p>
+    </a>
+    <a href="#">
+      <img src="icons/user.png" alt="">
+      <p>我的主页</p>
+    </a>
+  </footer>
+
+</body>
+<script src="js/flexible.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+  // 匿名函数自调用
+  (function () {
+    var swiper = new Swiper('.swiper_jyzd', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      // 添加轮播图下面的小圆点
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   clickable: true,
+      // },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  })();
+  (function(){
+    var swiper = new Swiper('.swiper_cdxx', {
+      slidesPerView: 2.4,
+      spaceBetween: 20,
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   clickable: true,
+      // },
+    });
+  })();
+</script>
+
+</html>
