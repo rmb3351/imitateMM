@@ -1,0 +1,2 @@
+# imitateMM
+static page
